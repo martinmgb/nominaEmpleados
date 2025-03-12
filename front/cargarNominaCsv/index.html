@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Procesa CSV de Nómina de Empleados</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="procesarCsv">
+        <h3>Procesar Nómina de Empleados (CSV)</h3>
+        <form id="formProcesarCsv" enctype="multipart/form-data">
+            <input type="file" id="csvFile" accept=".csv" required>
+            <span id="csvFileError" class="error-mensaje"></span><br>
+            <button type="submit">Procesar</button>
+        </form>
+    </div>
+    <span id="generalError" class="error-mensaje"></span><br>
+    <span id="generalMensaje" class="info-mensaje"></span><br>
+    <div id="empleados" style="display: none;">
+        <h1>Empleados procesados</h1>
+        <table id="tablaEmpleados">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Rut</th>
+                    <th>Cargo</th>
+                    <th>Salario Base</th>
+                    <th>Bonos</th>
+                    <th>Descuentos</th>
+                    <th>Salario Total</th>
+                    <th>Estatus</th>
+                    <th>Observacion</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Las filas de los empleados se agregarán aquí con JavaScript -->
+            </tbody>
+        </table>
+    </div>
+    
+    <!--script src="js/lib/jquery-3.7.1.min.js"></script-->
+    <script src="js/app-events-procesar-csv.js"></script>
+</body>
+</html>

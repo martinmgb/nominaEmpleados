@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nómina de Empleados</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="empleados">
+        <h1>Lista de Empleados</h1>
+        <table id="tablaEmpleados">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Rut</th>
+                    <th>Cargo</th>
+                    <th>Salario Base</th>
+                    <th>Bonos</th>
+                    <th>Descuentos</th>
+                    <th>Salario Total</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Las filas de los empleados se agregarán aquí con JavaScript -->
+            </tbody>
+        </table>
+    </div>
+    <span id="generalError" class="error-mensaje"></span><br>
+    <div id="agregarEmpleado">
+        <h3>Agregar Nuevo Empleado</h3>
+        <form id="formAgregarEmpleado">
+            <label for="nombreInput">Nombre:</label>
+            <input type="text" id="nombreInput" required>
+            <span id="nombreError" class="error-message"></span><br>
+
+            <label for="apellidoInput">Apellido:</label>
+            <input type="text" id="apellidoInput" required>
+            <span id="apellidoError" class="error-mensaje"></span><br>
+
+            <label for="rutInput">Rut:</label>
+            <input type="text" id="rutInput" required>
+            <span id="rutError" class="error-mensaje"></span><br>
+
+            <label for="cargoInput">Cargo:</label>
+            <input type="text" id="cargoInput" required>
+            <span id="cargoError" class="error-mensaje"></span><br>
+
+            <label for="salarioBaseInput">Salario Base:</label>
+            <input type="number" id="salarioBaseInput" required>
+            <span id="salarioBaseError" class="error-mensaje"></span><br>
+            
+            <label for="bonoInput">Bonos:</label>
+            <input type="number" id="bonoInput" required>
+            <span id="bonoError" class="error-mensaje"></span><br>
+
+            <label for="descuentoInput">Descuentos:</label>
+            <input type="number" id="descuentoInput" required>
+            <span id="descuentoError" class="error-mensaje"></span><br>
+            
+            <button type="submit">Agregar Empleado</button>
+        </form>
+    </div>
+    <!--script src="js/lib/jquery-3.7.1.min.js"></script-->
+    <script src="js/app-events.js"></script>
+</body>
+</html>

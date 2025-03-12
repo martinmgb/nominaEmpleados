@@ -1,0 +1,13 @@
+.classpath
+.project
+.factorypath
+.settings/
+target/
+*/target/*
+*/target/**
+jasper/
+*/jasper/*
+*/jasper/**
+.jasper
+.idea/
+.idea_modules/

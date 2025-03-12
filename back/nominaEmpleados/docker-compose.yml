@@ -1,0 +1,35 @@
+version: '3.8'
+services:
+  db:
+    container_name: pg_container
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: pass
+      POSTGRES_DB: empleados_bd
+    ports:
+      - "5432:5432"
+    volumes:
+      - c:\postgres_data:/var/lib/postgresql/data
+  pgadmin:
+    container_name: pgadmin4_container
+    image: dpage/pgadmin4
+    restart: always
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@admin.com
+      PGADMIN_DEFAULT_PASSWORD: root
+    ports:
+      - "5050:80"
+  api:
+    container_name: api-nominaempleados
+    build: .
+    restart: always
+    environment:
+      DB_HOST: pg_container
+      DB_PORT: 5432
+      DB_DATABASE: empleados_bd
+      DB_USER: root
+      DB_PASSWORD: pass
+    ports:
+      - "8080:8080"

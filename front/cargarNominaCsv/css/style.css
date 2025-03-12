@@ -1,0 +1,14 @@
+.error-mensaje {
+    color: red;
+    font-size: 12px;
+    display: none; 
+}
+
+.info-mensaje {
+    font-size: 12px;
+    display: none; 
+}
+
+input.error {
+    border: 2px solid red;
+}
